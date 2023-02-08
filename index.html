@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio - satish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/54d96cbbb9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/satisfy 1.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX designer</p>  
+                <h1>Hello there! <br/>I'm Satish.</h1>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------------------about---------------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src = "images/messi.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hi there! My name is Satish and I am thrilled to have you visit my portfolio.<br/>
+                        This website showcases my skills, achievements, and projects that I have worked<br/>
+                        on in the past. Feel free to browse and learn more about me and my work.<br/>
+                        If you have any questions, don't hesitate to reach out.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web interfaces</li>
+                            <li><span>3D modeling</span><br>Modeling in Blender</li>
+                            <li><span>Sketching/Logo </span><br>Designing logos </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Created a Learning Resources Management System</span><br>For my diploma final year project website "dip|dox",<br>
+                            I worked on complete front-end and most of back-end with my group members!</li>
+                            <li><span>3D Models using Blender</span><br>I played a lot making 3D models </li>
+                            <li><span>Sketching/Paintings</span><br>As it's my hobby, I often makes a lot of <br>sketches and paintings in my free time!</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2009-19</span><br>Schooling from private schools in Hubli</li>
+                            <li><span>2019-22</span><br>Diploma in Computer-Sciencs at KHK Dharwad</li>
+                            <li><span>2023-till now </span><br>Engineering in Computer-Science at GIT Belgum </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------services-------------------------------------------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>Web design</h2>
+                    <p>I would be pleased to help you build better UI for your business.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-pen-ruler"></i>
+                    <h2>Logo Designing</h2>
+                    <p>As per my experience in designing logos, i guarantee you perfection!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pencil"></i>
+                    <h2>Sketching</h2>
+                    <p>Character-designing , fantacy ideas can be illustrated, just give me key-words.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
